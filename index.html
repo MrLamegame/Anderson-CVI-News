@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anderson CVI News - Your School's Voice</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Anderson CVI News</h1>
+                    <p>Your School's Voice</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="category.html?cat=sports">Sports</a></li>
+                            <li><a href="category.html?cat=academics">Academics</a></li>
+                            <li><a href="category.html?cat=events">School Events</a></li>
+                            <li><a href="category.html?cat=clubs">Clubs</a></li>
+                            <li><a href="category.html?cat=announcements">Announcements</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="accountBtn">Account</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Anderson CVI News</h2>
+                <p>Stay updated with the latest happenings at our school</p>
+            </div>
+        </section>
+
+        <section class="featured-news">
+            <div class="container">
+                <h2>Featured News</h2>
+                <div class="news-grid" id="featuredNews">
+                    <!-- Featured articles will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-news">
+            <div class="container">
+                <h2>Latest Articles</h2>
+                <div class="articles-grid" id="latestArticles">
+                    <!-- Latest articles will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-overview">
+            <div class="container">
+                <h2>Browse by Category</h2>
+                <div class="categories-grid">
+                    <div class="category-card" onclick="location.href='category.html?cat=sports'">
+                        <i class="fas fa-football-ball"></i>
+                        <h3>Sports</h3>
+                        <p>Latest sports news and updates</p>
+                    </div>
+                    <div class="category-card" onclick="location.href='category.html?cat=academics'">
+                        <i class="fas fa-book"></i>
+                        <h3>Academics</h3>
+                        <p>Academic achievements and news</p>
+                    </div>
+                    <div class="category-card" onclick="location.href='category.html?cat=events'">
+                        <i class="fas fa-calendar"></i>
+                        <h3>School Events</h3>
+                        <p>Upcoming and past school events</p>
+                    </div>
+                    <div class="category-card" onclick="location.href='category.html?cat=clubs'">
+                        <i class="fas fa-users"></i>
+                        <h3>Clubs</h3>
+                        <p>Club activities and announcements</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Anderson CVI News</h3>
+                    <p>Your trusted source for school news and updates.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Anderson Collegiate Vocational Institute</p>
+                    <p>Email: news@andersoncvi.edu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Anderson CVI News. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

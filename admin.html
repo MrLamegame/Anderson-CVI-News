@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Anderson CVI News</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Admin Panel</h1>
+            <div class="admin-nav">
+                <button onclick="location.href='index.html'">Back to Site</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <div class="admin-sidebar">
+                <ul>
+                    <li><a href="#" onclick="showSection('create')" class="active">Create Article</a></li>
+                    <li><a href="#" onclick="showSection('manage')">Manage Articles</a></li>
+                    <li><a href="#" onclick="showSection('users')">User Management</a></li>
+                </ul>
+            </div>
+
+            <div class="admin-main">
+                <div id="createSection" class="admin-section active">
+                    <h2>Create New Article</h2>
+                    <form id="articleForm">
+                        <div class="form-group">
+                            <label for="title">Article Title:</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category:</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="sports">Sports</option>
+                                <option value="academics">Academics</option>
+                                <option value="events">School Events</option>
+                                <option value="clubs">Clubs</option>
+                                <option value="announcements">Announcements</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author:</label>
+                            <input type="text" id="author" name="author" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="excerpt">Excerpt:</label>
+                            <textarea id="excerpt" name="excerpt" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Article Content:</label>
+                            <textarea id="content" name="content" rows="15" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageUrl">Image URL (optional):</label>
+                            <input type="url" id="imageUrl" name="imageUrl">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="featured" name="featured">
+                                Featured Article
+                            </label>
+                        </div>
+                        <button type="submit">Publish Article</button>
+                    </form>
+                </div>
+
+                <div id="manageSection" class="admin-section">
+                    <h2>Manage Articles</h2>
+                    <div id="articlesList">
+                        <!-- Articles list will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="usersSection" class="admin-section">
+                    <h2>User Management</h2>
+                    <div id="usersList">
+                        <!-- Users list will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
